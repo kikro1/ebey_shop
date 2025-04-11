@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection List</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Inter, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        a:hover {
+            color: #23527c;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .hero {
+            /* background-color: #f9f9f9; */
+            color: #ffffff;
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/slider2.webp') no-repeat center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .hero-wrapper {
+            max-width: 800px;
+            margin: auto auto auto 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+        }
+
+        .hero-title {
+            font-size: 64px;
+            font-weight: bold
+                /* margin-bottom: 1rem; */
+        }
+
+        .hero-text {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            text-align: right;
+            font-weight: bold;
+            font-size: 32px;
+            margin-bottom: 1.5rem;
+        }
+
+        .maim-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 22px;
+            margin: 16px 88px;
+            justify-content: space-between;
+        }
+
+        .maim-menu a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            /* margin: 12px auto; */
+        }
+        .maim-menu li{
+            display: flex;
+            align-items: center;
+        }
+
+        .maim-menu a:hover {
+            color: #e3f2ff;
+        }
+
+        .menu-card {
+
+            border: 1px solid #98B8FF;
+            background-color: #1B76BB;
+            padding: 12px 50px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            
+            /* height: 50xp; */
+            /* margin: 10px; */
+        }
+
+        .course-card:hover {
+            background: #555;
+            transform: translateY(-5px);
+        }
+
+        .main-wrapper {
+            display: flex;
+        }
+
+        .side-categiries {
+            width: 320%;
+            /* background-color: #f9f9f9; */
+            padding: 20px;
+            /* border-radius: 8px; */
+
+            /* box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); */
+            border-right: 3px solid #e5e5e5;
+            border-top: 3px solid #e5e5e5;
+            
+        }
+        .main-second-wrapper {
+            border-top: 3px solid #e5e5e5;
+            padding: 10px;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        .side-menu a {
+            text-decoration: none;
+            color: #000;
+            /* font-size: 16px; */
+            font-weight: bold;
+        }
+
+        .side-banner-img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .side-banner-title {
+            font-size: 20px;
+        }
+
+        .side-banner-top {
+            margin-top: 16px;
+        }
+
+        .side-banner-bottom h2{
+            font-size: 16px;
+        }
+
+        .banner-text {
+            display: flex;
+            align-items: center;
+        }
+
+
+/* Icons ________________________________________________________________________________________________________________________________________________ */
+        .arrow-right-icon {
+            background-image: url('/img/Arrow_Down_MD.svg');
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .star-icon {
+            background-image: url('/img/icons8-star-48\ 5.svg');
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .chat-icon {
+            background-image: url('/img/Chat_Circle_Check.svg');
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .credit-card-icon {
+            background-image: url('/img/Credit_Card_01.svg');
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+/* ________________________________________________________________________________________________________________________________________________ */
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="hero">
+            <div class="hero-wrapper">
+                <h1 class="hero-title">Letterbox4you</h1>
+                <p class="hero-text">Your trusted Letterbox Supplier<br>
+                    99.4% Happy Customers<br>
+                    Over 7.9K Products Sold<br>
+                    Quality products & excellent service</p>
+
+            </div>
+        </section>
+        <section class="maim-menu">
+            <ul>
+                <div class="menu-card">
+                    <li><a href="#">Home</a><span class="arrow-right-icon"></span></li>
+                </div>
+                <div class="menu-card">
+                    <li><a href="#">Items For Sale</a><span class="arrow-right-icon"></span></li>
+                </div>
+                <div class="menu-card">
+                    <li><a href="#">About Us</a><span class="arrow-right-icon"></span></li>
+                </div>
+                <div class="menu-card">
+                    <li><a href="#">Feedback</a><span class="arrow-right-icon"></span></li>
+                </div>
+                <div class="menu-card">
+                    <li><a href="#">Contact</a><span class="arrow-right-icon"></span></li>
+                </div>
+            </ul>
+
+        </section>
+    </header>
+    <main>
+        <div class="main-wrapper">
+            <div class="side-categiries">
+                
+                <section class="side-categiries-menu">
+                    <div class="side-menu">
+                        <ul>
+                            <li><a href="#">All Categories</a></li>
+                            <li><a href="#">Apartment Mailboxes</a></li>
+                            <li><a href="#">Parcel Boxes For Homes</a></li>
+                            <li><a href="#">Clearance</a></li>
+                            <li><a href="#">House Numbers</a></li>
+                            <li><a href="#">Post Boxes For House</a></li>
+                            <li><a href="#">Wall Mounted Parcel Boxes</a></li>
+                            <li><a href="#">Large External Parcel Boxes</a></li>
+                            <li><a href="#">Parcel Boxes 4 Gates & Fences</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                    </div>
+
+                    
+    
+                </section>
+                <section class="side-categiries-banner">
+                    <div class="side-banner-wrapper">
+                        <div class="side-banner-card">
+                            <div class="side-banner-top">
+                                <img class="side-banner-img" src="/img/Group 51.png" alt="icon">
+                                <div class="side-banner-title">
+                                    <h2>Letterbox4you</h2>
+                                    <div class="side-banner-stars">
+                                        <span class="star-icon"></span>
+                                        <span class="star-icon"></span>
+                                        <span class="star-icon"></span>
+                                        <span class="star-icon"></span>
+                                        <span class="star-icon"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-banner-bottom">
+                                <div class="banner-text">
+                                    <h2>99.4% positive Feedback</h2><span class="chat-icon"></span>
+                                </div>
+                                <div class="banner-text">
+                                    <h2>7.9K items sold</h2><span class="credit-card-icon"></span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+            </div>
+                
+
+            
+
+
+            
+            <div class="main-second-wrapper">
+                <section class="main">
+                    <div class="textall-top-1">
+                        <h2>Fast dispatch from our UK warehouse. <br>
+                            Top-rated customer service you can rely on.</h2>
+                    </div>
+                    <div class="description-1">
+                        <p class="description-text">
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+                            as
+                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                            in
+                            their infancy. Various versions have evolved over the years, sometimes by accident,
+                            sometimes on
+                            purpose (injected humour and the like).
+
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+                            as
+                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                            in
+                            their infancy. Various versions have evolved over the years, sometimes by accident,
+                            sometimes on
+                            purpose (injected humour and the like).
+
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+                            as
+                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                            in
+                            their infancy. Various versions have evolved over the years, sometimes by accident,
+                            sometimes on
+                            purpose (injected humour and the like).
+
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+                            as
+                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                            in
+                            their infancy. Various versions have evolved over the years, sometimes by accident,
+                            sometimes on
+                            purpose (injected humour and the like).
+
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+                            as
+                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                            in
+                            their infancy. Various versions have evolved over the years, sometimes by accident,
+                            sometimes on
+                            purpose (injected humour and the like).
+                        </p>
+                    </div>
+                    <div class="image-description">
+                        <div class="image-description-container">
+                            <div class="image-card">
+                                <img src="" alt="">
+                            </div>
+                            <div>
+                                <p>Top Quality Guaranteed</p>
+                            </div>
+                        </div>
+                        <div class="image-description-img">
+                            <div class="image-card">
+                                <img src="" alt="">
+                            </div>
+                            <div>
+                                <p>Fast & Reliable UK Dispatch</p>
+                            </div>
+                        </div>
+                        <div class="image-description-img">
+                            <div class="image-card">
+                                <img src="" alt="">
+                            </div>
+                            <div>
+                                <p>Secure and Trusted Shopping</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="description-2">
+                        <p class="description-text">
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+                            as
+                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                            in
+                            their infancy. Various versions have evolved over the years, sometimes by accident,
+                            sometimes on
+                            purpose (injected humour and the like).
+
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+                            as
+                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                            in
+                            their infancy. Various versions have evolved over the years, sometimes by accident,
+                            sometimes on
+                            purpose (injected humour and the like).
+
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+                            as
+                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                            in
+                            their infancy. Various versions have evolved over the years, sometimes by accident,
+                            sometimes on
+                            purpose (injected humour and the like).
+                        </p>
+                    </div>
+                    <div class="textall-top-2">
+                        <p>
+                            Letterbox4you specialises in selling superior quality letterboxes and related products. We
+                            are a
+                            small business based in Buckinghamshire and have been providing homeowners and businesses
+                            with
+                            letterboxes since 2012. Our products are sourced from a select few manufacturers in Europe
+                            that
+                            have been specialising in letterboxes for many years. We are the exclusive representative in
+                            the
+                            UK and Republic of Ireland for some of these manufacturers and, by bringing to the market
+                            products from a few handpicked manufacturers, Letterbox4you can ensure the focus is on
+                            quality
+                            accessories and long lasting, safe and secure post boxes.  Our letterboxes are of the
+                            highest
+                            standard & subject to the highest quality control procedure. All our manufacturers are
+                            certified
+                            with ISO 9001 - the international standard that specifies requirements for a quality
+                            management
+                            system. The quality of our products and services are confirmed by the independent reviews
+                            platform on eBay and outside, with several awards for outstanding customer service won every
+                            year.
+                        </p>
+
+                    </div>
+
+                </section>
+                <section class="policies">
+                    <div class="policies-wrapper">
+                        <h2>Store Policies</h2>
+                        <div class="policies-buttons">
+                            <div>
+                                <p>Payment</p>
+                            </div>
+                            <div>
+                                <p>Shipping</p>
+                            </div>
+                            <div>
+                                <p>Returns</p>
+                            </div>
+                            <div>
+                                <p>Feedback</p>
+                            </div>
+                            <div>
+                                <p>About Us</p>
+                            </div>
+                        </div>
+                        <div class="policies-text">
+                            Our letterboxes are of the highest standard & subject to the highest quality control
+                            procedure.
+                            All our manufacturers are certified with ISO 9001 - the international standard that
+                            specifies
+                            requirements for a quality management system. The quality of our products and services are
+                            confirmed by the independent reviews platform on eBay and outside, with several awards for
+                            outstanding customer service won every year.
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+
+    </main>
+
+
+</body>
+
+</html>
+
+
+
+</div>
