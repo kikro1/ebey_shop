@@ -64,6 +64,8 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                display: flex;
+                align-items: flex-end;
 
             }
 
@@ -73,6 +75,13 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
+
+                background: linear-gradient(rgba(58, 160, 255, 0.6), rgba(58, 160, 255, 0.6));
+                /* background-color: #1B76BB; */
+                border-radius: 10px;
+                color: #fff;
+                padding: 16px;
+                margin: 16px;
 
             }
 
@@ -141,7 +150,13 @@
                 min-width: 250px;
                 justify-content: center;
             }
-            
+            .menu-card a{
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
 
             .menu-card:hover {
                 background: #44aeff;
@@ -204,14 +219,6 @@
                 justify-content: space-between;
 
             }
-
-            /* .banner-text h2 {
-            margin: 0;
-            display: flex;
-            flex-direction: row;
-
-        } */
-
 
             .textall-top-1 {
                 /* border: 1px solid #98B8FF; */
@@ -384,6 +391,14 @@
                 justify-content: center;
                 margin: 16px 0px;
                 gap: 10px;
+
+                background: linear-gradient(rgba(58, 160, 255, 0.6), rgba(58, 160, 255, 0.6));
+                /* background-color: #1B76BB; */
+                border-radius: 10px;
+                color: #fff;
+                padding: 16px;
+
+
             }
 
             .hero {
@@ -417,7 +432,6 @@
             .burger {
                 display: flex;
                 background-color: #1B76BB;
-                /* padding: 12px 50px; */
                 margin: 16px;
                 border-radius: 10px;
                 font-weight: bold;
@@ -426,7 +440,7 @@
                 color: #fff;
                 cursor: pointer;
                 align-items: center;
-                /* z-index: 10; */
+                padding: 5px;
             }
 
             .burger p {
@@ -441,6 +455,7 @@
                 align-items: center;
                 justify-content: space-between;
 
+
             }
 
             .maim-menu ul {
@@ -450,14 +465,14 @@
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
-                margin: 16px 88px;
+                margin: 16px;
                 justify-content: space-between;
             }
 
             .maim-menu a {
                 text-decoration: none;
                 color: #ffffff;
-                font-size: 16px;
+                font-size: 24px;
                 font-weight: bold;
                 /* margin: 12px auto; */
             }
@@ -468,17 +483,30 @@
 
             }
 
+            .maim-menu {
+                background-color: #1B76BB;
+
+                border-radius: 10px;
+                transition: transform 0.3s ease, background 0.3s ease;
+                /* height: 50px; */
+
+                align-items: center;
+                color: #fff;
+                margin: 16px;
+                text-align: left;
+
+            }
+
             .menu-card {
-                background-color: #44aeff;
-                padding: 12px 50px;
+                /* background-color: #44aeff; */
+                /* padding: 12px 50px; */
                 border-radius: 5px;
                 transition: transform 0.3s ease, background 0.3s ease;
-                height: 50px;
+                /* height: 50px; */
                 display: flex;
                 align-items: center;
                 cursor: pointer;
-                display: block;
-                width: 380px;
+                /* width: 380px; */
             }
 
             .side-categiries {
@@ -600,7 +628,8 @@
                 transition: transform 0.3s ease, background 0.3s ease;
                 border-radius: 10px;
                 padding: 16px;
-                min-height: 200px;
+                min-height: 360px;
+
             }
 
 
@@ -729,6 +758,7 @@
         <section class="hero">
             <div class="hero-wrapper">
                 <h1 class="hero-title">Letterbox4you</h1>
+
                 <p class="hero-text">Your trusted Letterbox Supplier<br>
                     99.4% Happy Customers<br>
                     Over 7.9K Products Sold<br>
@@ -738,20 +768,22 @@
         </section>
 
         <nav class="main-nav">
-            <div class="burger"
-                onclick="toggleMenu(), this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))">
-                <!-- <span class="hamburger-icon"></span> -->
-                <button class="menu">
-                    <svg width="80" height="80" viewBox="0 0 100 100">
-                        <path class="line line1"
-                            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                        <path class="line line2" d="M 20,50 H 80" />
-                        <path class="line line3"
-                            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-                    </svg>
+            <div class="burger-wrapper">
+                <div class="burger"
+                    onclick="toggleMenu(), this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))">
+                    <!-- <span class="hamburger-icon"></span> -->
+                    <button class="menu">
+                        <svg width="50" height="50" viewBox="0 0 100 100">
+                            <path class="line line1"
+                                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3"
+                                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
 
-                    <p>Main Menu</p>
-                </button>
+                        <p>Main Menu</p>
+                    </button>
+                </div>
             </div>
 
             <section class="maim-menu" id="maim-menu">
