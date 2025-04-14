@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Burger Menu Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .main-nav {
+      background: #222;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    .burger {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .menu {
+      background: none;
+      border: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .maim-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #333;
+    }
+
+    .maim-menu.active {
+      max-height: 500px;
+    }
+
+    .maim-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-card {
+      border-bottom: 1px solid #444;
+    }
+
+    .menu-card a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .menu-card a:hover {
+      background: #444;
+    }
+
+    .arrow-right-icon::after {
+      content: '→';
+      font-size: 14px;
+    }
+
+    svg {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .line {
+      transition: all 0.3s ease;
+    }
+
+    .opened .line1 {
+      transform: rotate(45deg) translate(12px, 12px);
+    }
+
+    .opened .line2 {
+      opacity: 0;
+    }
+
+    .opened .line3 {
+      transform: rotate(-45deg) translate(13px, -13px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="main-nav">
+    <div class="burger" onclick="toggleMenu(this)">
+      <button class="menu">
+        <svg width="60" height="60" viewBox="0 0 100 100">
+          <path class="line line1" d="M 20,29 H 80" />
+          <path class="line line2" d="M 20,50 H 80" />
+          <path class="line line3" d="M 20,71 H 80" />
+        </svg>
+        <p>Main Menu</p>
+      </button>
+    </div>
+
+    <section class="maim-menu" id="maim-menu">
+      <ul>
+        <li class="menu-card">
+          <a href="https://www.ebay.co.uk/str/qualitypostboxes">Home<span class="arrow-right-icon"></span></a>
+        </li>
+        <li class="menu-card">
+          <a href="http://www.ebay.co.uk/sch/letterbox4you/m.html?_nkw=&amp;_armrs=1&amp;_ipg=&amp;_from=">
+            Items For Sale<span class="arrow-right-icon"></span></a>
+        </li>
+        <li class="menu-card">
+          <a href="https://www.ebay.co.uk/str/qualitypostboxes#tab1">About Us<span class="arrow-right-icon"></span></a>
+        </li>
+        <li class="menu-card">
+          <a
+            href="https://feedback.ebay.co.uk/ws/eBayISAPI.dll?ViewFeedback2&amp;userid=letterbox4you&amp;ftab=AllFeedback&amp;myworld=true&amp;rt=nc">
+            Feedback<span class="arrow-right-icon"></span></a>
+        </li>
+        <li class="menu-card">
+          <a
+            href="https://www.ebay.co.uk/cnt/FindAnswers?ShowSellerFAQ=&item_id=122512343059&requested=letterbox4you&redirect=0&frm=284&rt=nc&ssPageName=PageSellerM2MFAQ_VI&_trksid=p4429486.m3561.l170198&_caprdt=1">
+            Contact<span class="arrow-right-icon"></span></a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+
+  <script>
+    function toggleMenu(burger) {
+      const menu = document.getElementById('maim-menu');
+      menu.classList.toggle('active');
+      burger.classList.toggle('opened');
+    }
+  </script>
+
+</body>
+
+</html>

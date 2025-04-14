@@ -37,149 +37,175 @@
             list-style: none;
         }
 
-        .hero {
-            /* background-color: #f9f9f9; */
-            color: #ffffff;
-            height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/slider2.webp') no-repeat center center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-        }
-
-        .hero-wrapper {
-            max-width: 800px;
-            margin: auto auto auto 60%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-
-        }
-
-        .hero-title {
-            font-size: 64px;
-            font-weight: bold
-                /* margin-bottom: 1rem; */
-        }
-
-        .hero-text {
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            text-align: right;
-            font-weight: bold;
-            font-size: 32px;
-            margin-bottom: 1.5rem;
-        }
-
-        .maim-menu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 22px;
-            margin: 16px 88px;
-            justify-content: space-between;
-        }
-
-        .maim-menu a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: bold;
-            /* margin: 12px auto; */
-        }
-
-        .maim-menu li {
-            display: flex;
-            align-items: center;
-        }
-
-        .maim-menu a:hover {
-            color: #e3f2ff;
-        }
-
-        .menu-card {
-
-            border: 1px solid #98B8FF;
-            background-color: #1B76BB;
-            padding: 12px 50px;
-            border-radius: 5px;
-            transition: transform 0.3s ease, background 0.3s ease;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
+        ul li a {
             display: block;
-
-            /* height: 50xp; */
-            /* margin: 10px; */
-        }
-
-        .menu-card:hover {
-            background: #44aeff;
-            transform: translateY(-5px);
-        }
-
-        .main-wrapper {
-            display: flex;
-        }
-
-        .side-categiries {
-            padding: 20px;
-            border-right: 3px solid #e5e5e5;
-            border-top: 3px solid #e5e5e5;
-
-        }
-
-        .main-second-wrapper {
-            border-top: 3px solid #e5e5e5;
-            /* padding: 10px; */
-        }
-
-        .side-menu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-        }
-
-        .side-menu a {
+            /* padding: 10px 20px; */
             text-decoration: none;
-            color: #000;
-            /* font-size: 16px; */
-            font-weight: bold;
+            color: inherit;
         }
 
-        .side-banner-img {
-            width: 120px;
-            height: 120px;
-        }
-
-        .side-banner-title {
-            font-size: 20px;
-        }
-
-        .side-banner-top {
-            margin-top: 16px;
-        }
-
-        .side-banner-bottom h2 {
-            font-size: 16px;
-        }
-
-        .banner-text {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .maim-menu {
+            display: none;
 
         }
 
-        /* .banner-text h2 {
+        .burger {
+            display: none;
+        }
+
+        @media (min-width: 933px) {
+
+
+            .hero {
+                /* background-color: #f9f9f9; */
+                color: #ffffff;
+                height: 50vh;
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/slider2.webp') no-repeat center center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+            .hero-wrapper {
+                max-width: 800px;
+                margin: auto auto auto 60%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+            }
+
+            .hero-title {
+                font-size: 64px;
+                font-weight: bold
+                    /* margin-bottom: 1rem; */
+            }
+
+            .hero-text {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                text-align: right;
+                font-weight: bold;
+                font-size: 32px;
+                margin-bottom: 1.5rem;
+            }
+
+            .maim-menu {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+            }
+
+            .maim-menu ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                gap: 22px;
+                margin: 16px 88px;
+                justify-content: space-between;
+            }
+
+            .maim-menu a {
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: bold;
+                /* margin: 12px auto; */
+            }
+
+            .maim-menu li {
+                display: flex;
+                align-items: center;
+            }
+
+            .maim-menu a:hover {
+                color: #e3f2ff;
+            }
+
+            .menu-card {
+
+                border: 1px solid #98B8FF;
+                background-color: #1B76BB;
+                padding: 12px 50px;
+                border-radius: 5px;
+                transition: transform 0.3s ease, background 0.3s ease;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                display: block;
+                min-width: 250px;
+                justify-content: center;
+            }
+            
+
+            .menu-card:hover {
+                background: #44aeff;
+                transform: translateY(-5px);
+            }
+
+            .main-wrapper {
+                display: flex;
+            }
+
+            .side-categiries {
+                padding: 20px;
+                border-right: 3px solid #e5e5e5;
+                border-top: 3px solid #e5e5e5;
+
+            }
+
+            .main-second-wrapper {
+                border-top: 3px solid #e5e5e5;
+                /* padding: 10px; */
+            }
+
+            .side-menu ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+            }
+
+            .side-menu a {
+                text-decoration: none;
+                color: #000;
+                /* font-size: 16px; */
+                font-weight: bold;
+            }
+
+            .side-banner-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .side-banner-title {
+                font-size: 20px;
+            }
+
+            .side-banner-top {
+                margin-top: 16px;
+            }
+
+            .side-banner-bottom h2 {
+                font-size: 16px;
+            }
+
+            .banner-text {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+
+            /* .banner-text h2 {
             margin: 0;
             display: flex;
             flex-direction: row;
@@ -187,145 +213,464 @@
         } */
 
 
-        .textall-top-1 {
-            /* border: 1px solid #98B8FF; */
-            background-color: #1B76BB;
-            padding: 12px 50px;
-            border-radius: 10px;
-            transition: transform 0.3s ease, background 0.3s ease;
-            /* height: 50px; */
+            .textall-top-1 {
+                /* border: 1px solid #98B8FF; */
+                background-color: #1B76BB;
+                padding: 12px 50px;
+                border-radius: 10px;
+                transition: transform 0.3s ease, background 0.3s ease;
+                /* height: 50px; */
+                display: flex;
+                align-items: center;
+                color: #fff;
+                margin: 16px 42px 16px 42px;
+
+            }
+
+            .description-text {
+                margin: 0px 10%;
+            }
+
+            .image-description {
+                display: flex;
+                justify-content: space-around;
+                margin: 16px 5%;
+                gap: 10px;
+
+            }
+
+            .image-card {
+                border: 1px solid #727272;
+                background-color: #fff;
+                border-radius: 5px;
+                color: #fff;
+                margin-bottom: 10px;
+                height: 180px;
+            }
+
+            .image-card {
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+
+
+
+            .image-card img {
+                width: 180px;
+                /* height: 100%; */
+                object-fit: cover;
+                object-position: center;
+            }
+
+
+            .image-description-text {
+                background-color: #1B76BB;
+                padding: 12px 50px;
+                border-radius: 5px;
+                transition: transform 0.3s ease, background 0.3s ease;
+                /* height: 50px; */
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            .textall-top-2 {
+                padding: 16px;
+
+            }
+
+            .policies-wrapper {
+                background-color: #1B76BB;
+                padding: 16px;
+                border-radius: 10px;
+                transition: transform 0.3s ease, background 0.3s ease;
+                margin: 16px 42px 16px 42px;
+                color: #fff;
+
+            }
+
+            .policies-buttons {
+                display: flex;
+                justify-content: space-between;
+                margin: 16px 0px;
+                gap: 16px;
+
+            }
+
+            .policies-buttons-card {
+                background-color: #2AA3FF;
+                transition: transform 0.3s ease, background 0.3s ease;
+                padding: 12px 50px;
+                border-radius: 5px;
+                font-weight: bold;
+                min-width: 200px;
+                display: flex;
+                justify-content: center;
+
+
+            }
+
+            .policies-buttons-card-active {
+                /* background-color: #2AA3FF; */
+                transition: transform 0.3s ease, background 0.3s ease;
+                padding: 12px 50px;
+                border-radius: 5px;
+                font-weight: bold;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                background: #44aeff;
+                transform: translateY(-2px);
+                /* width: 228px; */
+
+            }
+
+            .policies-buttons-card:hover {
+                background: #44aeff;
+                transform: translateY(-5px);
+            }
+
+            .policies-buttons-card:active {
+                background: #44aeff;
+                transform: translateY(-2px);
+            }
+
+            .policies-text {
+                background-color: #2AA3FF;
+                transition: transform 0.3s ease, background 0.3s ease;
+                border-radius: 10px;
+                padding: 16px;
+                min-height: 200px;
+            }
+
+
+            @media (min-width: 1700px) {
+
+                .policies-buttons-card {
+                    background-color: #2AA3FF;
+                    transition: transform 0.3s ease, background 0.3s ease;
+                    padding: 12px 50px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    min-width: 300px;
+                    display: flex;
+                    justify-content: center;
+
+                }
+
+
+            }
+        }
+
+
+        /* ___________________________________________________________________________________________________________________________________________________________________________ */
+
+
+
+
+        /* ______________________________________________________________________________________________________________ */
+
+        /* Mobile styles */
+        @media (max-width: 760px) {
+
+            .hero-wrapper {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 16px 0px;
+                gap: 10px;
+            }
+
+            .hero {
+                width: 100%;
+                height: auto;
+                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('./img/slider2.webp') no-repeat center center;
+                color: #FFF;
+                background-size: cover;
+                padding: 16px;
+                /* border-radius: 10px; */
+                transition: transform 0.3s ease, background 0.3s ease;
+                display: flex;
+                /* align-items: center; */
+                justify-content: flex-end;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+
+            .hero-title {
+                text-align: right;
+            }
+
+            .hero-text {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                text-align: right;
+                font-weight: bold;
+            }
+
+            .burger {
+                display: flex;
+                background-color: #1B76BB;
+                /* padding: 12px 50px; */
+                margin: 16px;
+                border-radius: 10px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                color: #fff;
+                cursor: pointer;
+                align-items: center;
+                /* z-index: 10; */
+            }
+
+            .burger p {
+                font-size: 24px;
+                font-weight: bold;
+                color: #fff;
+                margin-left: 5px;
+            }
+
+            .burger button {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+
+            .maim-menu ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin: 16px 88px;
+                justify-content: space-between;
+            }
+
+            .maim-menu a {
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: bold;
+                /* margin: 12px auto; */
+            }
+
+            .maim-menu span {
+                display: none;
+
+
+            }
+
+            .menu-card {
+                background-color: #44aeff;
+                padding: 12px 50px;
+                border-radius: 5px;
+                transition: transform 0.3s ease, background 0.3s ease;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                display: block;
+                width: 380px;
+            }
+
+            .side-categiries {
+                display: none;
+            }
+
+            .textall-top-1 {
+                background-color: #1B76BB;
+                padding: 16px;
+                border-radius: 10px;
+                transition: transform 0.3s ease, background 0.3s ease;
+                /* height: 50px; */
+                display: flex;
+                align-items: center;
+                color: #fff;
+                margin: 16px;
+                text-align: left;
+            }
+
+            .description-text {
+                margin: 0px 10%;
+            }
+
+            .image-card {
+                border: 1px solid #727272;
+                background-color: #fff;
+                border-radius: 10px;
+                color: #fff;
+                margin-bottom: 5px;
+
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+
+            }
+
+            .image-description-container {
+                margin: 16px 10%;
+            }
+
+            .image-card img {
+                width: 180px;
+                /* height: 100%; */
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .image-description-text {
+                background-color: #1B76BB;
+                padding: 16px 10%;
+                border-radius: 5px;
+                transition: transform 0.3s ease, background 0.3s ease;
+                /* height: 50px; */
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            .policies-wrapper {
+                background-color: #1B76BB;
+                padding: 16px;
+                border-radius: 10px;
+                transition: transform 0.3s ease, background 0.3s ease;
+                margin: 16px;
+                color: #fff;
+
+            }
+
+            .policies-buttons {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 16px 0px;
+                gap: 16px;
+
+            }
+
+            .policies-buttons-card {
+                background-color: #2AA3FF;
+                transition: transform 0.3s ease, background 0.3s ease;
+                padding: 12px 50px;
+                border-radius: 5px;
+                font-weight: bold;
+                min-width: 200px;
+                display: flex;
+                justify-content: center;
+
+
+            }
+
+            .policies-buttons-card-active {
+                transition: transform 0.3s ease, background 0.3s ease;
+                padding: 12px 50px;
+                border-radius: 5px;
+                font-weight: bold;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                background: #44aeff;
+                transform: translateY(-2px);
+            }
+
+            .policies-buttons-card:hover {
+                background: #44aeff;
+                transform: translateY(-5px);
+            }
+
+            .policies-buttons-card:active {
+                background: #44aeff;
+                transform: translateY(-2px);
+            }
+
+            .policies-text {
+                background-color: #2AA3FF;
+                transition: transform 0.3s ease, background 0.3s ease;
+                border-radius: 10px;
+                padding: 16px;
+                min-height: 200px;
+            }
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+        /* ________________________________________________________________________________________________________________ */
+
+        /* burger menu button ________________________________________________________________________________________________ */
+        .menu {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
             display: flex;
-            align-items: center;
-            color: #fff;
-            margin: 16px 42px 16px 42px;
-
+            padding: 0;
         }
 
-        .description-text {
-            margin: 0px 10%;
+        .line {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 6;
+            transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .image-description {
-            display: flex;
-            justify-content: space-around;
-            margin: 16px 5%;
-            gap: 10px;
-
+        .line1 {
+            stroke-dasharray: 60 207;
+            stroke-width: 6;
         }
 
-        .image-card {
-            border: 1px solid #727272;
-            background-color: #fff;
-            border-radius: 5px;
-            /* transition: transform 0.3s ease, background 0.3s ease; */
-            /* display: flex; */
-            /* align-items: center; */
-            /* justify-content: center; */
-            color: #fff;
-            margin-bottom: 10px;
-            height: 180px;
+        .line2 {
+            stroke-dasharray: 60 60;
+            stroke-width: 6;
         }
 
-        .image-card {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
+        .line3 {
+            stroke-dasharray: 60 207;
+            stroke-width: 6;
         }
 
+        .opened .line1 {
+            stroke-dasharray: 90 207;
+            stroke-dashoffset: -134;
+            stroke-width: 6;
+        }
 
+        .opened .line2 {
+            stroke-dasharray: 1 60;
+            stroke-dashoffset: -30;
+            stroke-width: 6;
+        }
 
-
-        .image-card img {
-            width: 180px;
-            /* height: 100%; */
-            object-fit: cover;
-            object-position: center;
+        .opened .line3 {
+            stroke-dasharray: 90 207;
+            stroke-dashoffset: -134;
+            stroke-width: 6;
         }
 
 
-        .image-description-text {
-            background-color: #1B76BB;
-            padding: 12px 50px;
-            border-radius: 5px;
-            transition: transform 0.3s ease, background 0.3s ease;
-            /* height: 50px; */
-            display: flex;
-            align-items: center;
-            color: #fff;
-            font-weight: bold;
-        }
-/* 
-        .image-description-text:hover {
-            background: #44aeff;
-            transform: translateY(-2px);
-        } */
-
-        .textall-top-2 {
-            padding: 16px;
-
-        }
-
-        .policies-wrapper {
-            background-color: #1B76BB;
-            padding: 16px;
-            border-radius: 10px;
-            transition: transform 0.3s ease, background 0.3s ease;
-            margin: 16px 42px 16px 42px;
-            color: #fff;
-
-        }
-
-        .policies-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin: 16px 0px;
-            gap: 16px;
-
-        }
-
-        .policies-buttons-card {
-            background-color: #2AA3FF;
-            transition: transform 0.3s ease, background 0.3s ease;
-            padding: 12px 50px;
-            border-radius: 5px;
-            font-weight: bold;
-            /* width: 228px; */
-
-        }
-        .policies-buttons-card-active {
-            /* background-color: #2AA3FF; */
-            transition: transform 0.3s ease, background 0.3s ease;
-            padding: 12px 50px;
-            border-radius: 5px;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            background: #44aeff;
-            transform: translateY(-2px);
-            /* width: 228px; */
-
-        }
-
-        .policies-buttons-card:hover {
-            background: #44aeff;
-            transform: translateY(-5px);
-        }
-
-        .policies-buttons-card:active {
-            background: #44aeff;
-            transform: translateY(-2px);
-        }
-
-        .policies-text {
-            background-color: #2AA3FF;
-            transition: transform 0.3s ease, background 0.3s ease;
-            border-radius: 10px;
-            padding: 16px;
-            min-height: 200px;
-        }
+        /* end of burger menu button ______________________________________________________________________________________________ */
 
 
 
@@ -366,6 +711,15 @@
             margin-left: 5px;
         }
 
+        .hamburger-icon {
+            background-image: url('./img/Hamburger_MD.svg');
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
         /* ________________________________________________________________________________________________________________________________________________ */
     </style>
 </head>
@@ -382,26 +736,51 @@
 
             </div>
         </section>
-        <section class="maim-menu">
-            <ul>
-                <div class="menu-card">
-                    <li><a href="#">Home</a><span class="arrow-right-icon"></span></li>
-                </div>
-                <div class="menu-card">
-                    <li><a href="#">Items For Sale</a><span class="arrow-right-icon"></span></li>
-                </div>
-                <div class="menu-card">
-                    <li><a href="#">About Us</a><span class="arrow-right-icon"></span></li>
-                </div>
-                <div class="menu-card">
-                    <li><a href="#">Feedback</a><span class="arrow-right-icon"></span></li>
-                </div>
-                <div class="menu-card">
-                    <li><a href="#">Contact</a><span class="arrow-right-icon"></span></li>
-                </div>
-            </ul>
 
-        </section>
+        <nav class="main-nav">
+            <div class="burger"
+                onclick="toggleMenu(), this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))">
+                <!-- <span class="hamburger-icon"></span> -->
+                <button class="menu">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <path class="line line1"
+                            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="line line2" d="M 20,50 H 80" />
+                        <path class="line line3"
+                            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+
+                    <p>Main Menu</p>
+                </button>
+            </div>
+
+            <section class="maim-menu" id="maim-menu">
+                <ul>
+                    <li class="menu-card">
+                        <a href="https://www.ebay.co.uk/str/qualitypostboxes">Home</a><span
+                            class="arrow-right-icon"></span>
+                    </li>
+                    <li class="menu-card"><a
+                            href="http://www.ebay.co.uk/sch/letterbox4you/m.html?_nkw=&amp;_armrs=1&amp;_ipg=&amp;_from=">Items
+                            For Sale</a><span class="arrow-right-icon"></span></li>
+                    <li class="menu-card"><a href="https://www.ebay.co.uk/str/qualitypostboxes#tab1">About Us</a><span
+                            class="arrow-right-icon"></span></li>
+                    <li class="menu-card"><a
+                            href="https://feedback.ebay.co.uk/ws/eBayISAPI.dll?ViewFeedback2&amp;userid=letterbox4you&amp;ftab=AllFeedback&amp;myworld=true&amp;rt=nc">Feedback</a><span
+                            class="arrow-right-icon"></span></li>
+                    <li class="menu-card"><a
+                            href="https://www.ebay.co.uk/cnt/FindAnswers?ShowSellerFAQ=&item_id=122512343059&requested=letterbox4you&redirect=0&frm=284&rt=nc&ssPageName=PageSellerM2MFAQ_VI&_trksid=p4429486.m3561.l170198&_caprdt=1">Contact</a><span
+                            class="arrow-right-icon"></span></li>
+                </ul>
+                <script>
+
+                    function toggleMenu() {
+                        const menu = document.getElementById('maim-menu');
+                        menu.classList.toggle('burger');
+                    }
+                </script>
+            </section>
+        </nav>
     </header>
     <main>
         <div class="main-wrapper">
@@ -410,16 +789,34 @@
                 <section class="side-categiries-menu">
                     <div class="side-menu">
                         <ul>
-                            <li><a href="#">All Categories</a></li>
-                            <li><a href="#">Apartment Mailboxes</a></li>
-                            <li><a href="#">Parcel Boxes For Homes</a></li>
-                            <li><a href="#">Clearance</a></li>
-                            <li><a href="#">House Numbers</a></li>
-                            <li><a href="#">Post Boxes For House</a></li>
-                            <li><a href="#">Wall Mounted Parcel Boxes</a></li>
-                            <li><a href="#">Large External Parcel Boxes</a></li>
-                            <li><a href="#">Parcel Boxes 4 Gates & Fences</a></li>
-                            <li><a href="#">Other</a></li>
+                            <li><a href="https://www.ebay.co.uk/str/qualitypostboxes">All Categories</a></li>
+                            <li><a
+                                    href="https://www.ebay.co.uk/str/qualitypostboxes/Apartment-Mailboxes/_i.html?store_cat=9254990010">Apartment
+                                    Mailboxes</a></li>
+                            <li><a
+                                    href="https://www.ebay.co.uk/str/qualitypostboxes/Parcel-Boxes-For-Homes/_i.html?store_cat=35610463010">Parcel
+                                    Boxes For Homes</a></li>
+                            <li><a
+                                    href="https://www.ebay.co.uk/str/qualitypostboxes/Clearance/_i.html?store_cat=41122024010">Clearance</a>
+                            </li>
+                            <li><a
+                                    href="https://www.ebay.co.uk/str/qualitypostboxes/House-Numbers/_i.html?store_cat=41803268010">House
+                                    Numbers</a></li>
+                            <li><a
+                                    href="https://www.ebay.co.uk/str/qualitypostboxes/Post-Boxes-For-House/_i.html?store_cat=41822936010">Post
+                                    Boxes For House</a></li>
+                            <li><a
+                                    href="https://www.ebay.co.uk/str/qualitypostboxes/Wall-Mounted-Parcel-Boxes/_i.html?store_cat=41822938010">Wall
+                                    Mounted Parcel Boxes</a></li>
+                            <li><a
+                                    href="https://www.ebay.co.uk/str/qualitypostboxes/Large-External-Parcel-Boxes/_i.html?store_cat=41822940010">Large
+                                    External Parcel Boxes</a></li>
+                            <li><a
+                                    href="https://www.ebay.co.uk/str/qualitypostboxes/Parcel-Boxes-4-Gates-Fences/_i.html?store_cat=41822941010">Parcel
+                                    Boxes 4 Gates & Fences</a></li>
+                            <li><a
+                                    href="https://www.ebay.co.uk/str/qualitypostboxes/Other/_i.html?store_cat=1">Other</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -430,7 +827,7 @@
                     <div class="side-banner-wrapper">
                         <div class="side-banner-card">
                             <div class="side-banner-top">
-                                <img class="side-banner-img" src="./img/Group 51.png" alt="icon">
+                                <img class="side-banner-img" src="./img/Group 51.png" alt="Icon">
                                 <div class="side-banner-title">
                                     <h2>Letterbox4you</h2>
                                     <div class="side-banner-stars">
@@ -544,23 +941,23 @@
                     <div class="image-description">
                         <div class="image-description-container">
                             <div class="image-card">
-                                <img src="./img/1-gal.png" alt="">
+                                <img src="./img/1-gal.png" alt="Product Image">
                             </div>
                             <div class="image-description-text">
                                 <p>Top Quality Guaranteed</p>
                             </div>
                         </div>
-                        <div class="image-description-img">
+                        <div class="image-description-container">
                             <div class="image-card">
-                                <img src="./img/3-gal.png" alt="">
+                                <img src="./img/3-gal.png" alt="Product Image">
                             </div>
                             <div class="image-description-text">
                                 <p>Fast & Reliable UK Dispatch</p>
                             </div>
                         </div>
-                        <div class="image-description-img">
+                        <div class="image-description-container">
                             <div class="image-card">
-                                <img src="./img/2-gal.jpg" alt="">
+                                <img src="./img/2-gal.jpg" alt="Product Image">
                             </div>
                             <div class="image-description-text">
                                 <p>Secure and Trusted Shopping</p>
@@ -661,11 +1058,12 @@
                             </div>
                         </div>
                         <div class="policies-text" id="policy-text">
-                            We accept PayPal. PayPal is the fastest way to pay on eBay. You do not require a PayPal account and you can use your credit or debit card to make PayPal payments.
+                            We accept PayPal. PayPal is the fastest way to pay on eBay. You do not require a PayPal
+                            account and you can use your credit or debit card to make PayPal payments.
                         </div>
                     </div>
                 </section>
-                
+
                 <script>
                     function showPolicy(policy, button) {
                         var textElement = document.getElementById('policy-text');
@@ -677,24 +1075,24 @@
                             about: "It all started in 2012 in a spare bedroom when we sold our first letterbox on eBay… or perhaps it was even earlier in 1955 when one of our first suppliers decided to manufacture letterboxes. We’ve come a long way since then. From a small dream to run a lifestyle business on the side, to becoming one of the leading suppliers of individual and communal post boxes in the UK. It’s a thrilling feeling to know that everyday thousands of people in the UK, Ireland, Germany and even Australia are checking their Letterbox4you supplied mail box.<br><br>We also have names like Kier Construction, Engie, Galliford Try, Willmott Dixon and some of the largest housing associations and councils in London on our client list. And there are going to be many more thousands this year!"
                         };
                         textElement.innerHTML = policies[policy];
-                
+
                         // Сбросить стиль всех кнопок
                         var buttons = document.querySelectorAll('.policies-buttons-card');
-                        buttons.forEach(function(btn) {
+                        buttons.forEach(function (btn) {
                             btn.classList.remove('policies-buttons-card-active'); // Убираем класс active
                         });
-                
+
                         // Установить активный стиль для выбранной кнопки
                         button.classList.add('policies-buttons-card-active'); // Добавляем класс active
                     }
-                
+
                     // Устанавливаем текст по умолчанию при загрузке страницы
-                    window.onload = function() {
+                    window.onload = function () {
                         var defaultButton = document.querySelector('.policies-buttons-card');
                         showPolicy('payment', defaultButton);  // по умолчанию показывается текст "Payment"
                     }
                 </script>
-        </div>
+            </div>
         </div>
 
 
