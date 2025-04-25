@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collection List</title>
+    <title>Letterbox4you</title>
     <style>
         * {
             box-sizing: border-box;
@@ -39,7 +39,6 @@
 
         ul li a {
             display: block;
-            /* padding: 10px 20px; */
             text-decoration: none;
             color: inherit;
         }
@@ -52,6 +51,7 @@
         .burger {
             display: none;
         }
+
         .hero {
             width: 100%;
             height: auto;
@@ -62,7 +62,6 @@
 
 
             .hero {
-                /* background-color: #f9f9f9; */
                 color: #ffffff;
                 height: 50vh;
                 width: 100%;
@@ -83,7 +82,6 @@
                 align-items: flex-end;
 
                 background: linear-gradient(rgba(58, 160, 255, 0.6), rgba(58, 160, 255, 0.6));
-                /* background-color: #1B76BB; */
                 border-radius: 10px;
                 color: #fff;
                 padding: 16px;
@@ -94,7 +92,6 @@
             .hero-title {
                 font-size: 64px;
                 font-weight: bold
-                    /* margin-bottom: 1rem; */
             }
 
             .hero-text {
@@ -129,7 +126,6 @@
                 color: #ffffff;
                 font-size: 16px;
                 font-weight: bold;
-                /* margin: 12px auto; */
             }
 
             .maim-menu li {
@@ -156,7 +152,8 @@
                 min-width: 250px;
                 justify-content: center;
             }
-            .menu-card a{
+
+            .menu-card a {
                 text-decoration: none;
                 color: #ffffff;
                 font-size: 16px;
@@ -182,7 +179,6 @@
 
             .main-second-wrapper {
                 border-top: 3px solid #e5e5e5;
-                /* padding: 10px; */
             }
 
             .side-menu ul {
@@ -198,7 +194,6 @@
             .side-menu a {
                 text-decoration: none;
                 color: #000;
-                /* font-size: 16px; */
                 font-weight: bold;
             }
 
@@ -227,12 +222,10 @@
             }
 
             .textall-top-1 {
-                /* border: 1px solid #98B8FF; */
                 background-color: #1B76BB;
                 padding: 12px 50px;
                 border-radius: 10px;
                 transition: transform 0.3s ease, background 0.3s ease;
-                /* height: 50px; */
                 display: flex;
                 align-items: center;
                 color: #fff;
@@ -276,7 +269,6 @@
 
             .image-card img {
                 width: 180px;
-                /* height: 100%; */
                 object-fit: cover;
                 object-position: center;
             }
@@ -287,7 +279,6 @@
                 padding: 12px 50px;
                 border-radius: 5px;
                 transition: transform 0.3s ease, background 0.3s ease;
-                /* height: 50px; */
                 display: flex;
                 align-items: center;
                 color: #fff;
@@ -331,7 +322,6 @@
             }
 
             .policies-buttons-card-active {
-                /* background-color: #2AA3FF; */
                 transition: transform 0.3s ease, background 0.3s ease;
                 padding: 12px 50px;
                 border-radius: 5px;
@@ -339,7 +329,6 @@
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
                 background: #44aeff;
                 transform: translateY(-2px);
-                /* width: 228px; */
 
             }
 
@@ -400,7 +389,6 @@
                 gap: 10px;
 
                 background: linear-gradient(rgba(58, 160, 255, 0.6), rgba(58, 160, 255, 0.6));
-                /* background-color: #1B76BB; */
                 border-radius: 10px;
                 color: #fff;
                 padding: 16px;
@@ -415,10 +403,8 @@
                 color: #FFF;
                 background-size: cover;
                 padding: 16px;
-                /* border-radius: 10px; */
                 transition: transform 0.3s ease, background 0.3s ease;
                 display: flex;
-                /* align-items: center; */
                 justify-content: flex-end;
                 color: #fff;
                 margin-bottom: 10px;
@@ -481,7 +467,6 @@
                 color: #ffffff;
                 font-size: 24px;
                 font-weight: bold;
-                /* margin: 12px auto; */
             }
 
             .maim-menu span {
@@ -492,28 +477,49 @@
 
             .maim-menu {
                 background-color: #1B76BB;
-
                 border-radius: 10px;
                 transition: transform 0.3s ease, background 0.3s ease;
-                /* height: 50px; */
-
                 align-items: center;
                 color: #fff;
                 margin: 16px;
                 text-align: left;
+                animation: appear 0.5s ease forwards;
+            }
 
+            @keyframes appear {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes disappear {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+            }
+
+            .maim-menu.disappear {
+                animation: disappear 0.5s ease forwards;
             }
 
             .menu-card {
-                /* background-color: #44aeff; */
-                /* padding: 12px 50px; */
                 border-radius: 5px;
                 transition: transform 0.3s ease, background 0.3s ease;
-                /* height: 50px; */
                 display: flex;
                 align-items: center;
                 cursor: pointer;
-                /* width: 380px; */
             }
 
             .side-categiries {
@@ -525,7 +531,6 @@
                 padding: 16px;
                 border-radius: 10px;
                 transition: transform 0.3s ease, background 0.3s ease;
-                /* height: 50px; */
                 display: flex;
                 align-items: center;
                 color: #fff;
@@ -550,9 +555,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
-
-
             }
 
             .image-description-container {
@@ -561,7 +563,6 @@
 
             .image-card img {
                 width: 180px;
-                /* height: 100%; */
                 object-fit: cover;
                 object-position: center;
             }
@@ -571,7 +572,6 @@
                 padding: 16px 10%;
                 border-radius: 5px;
                 transition: transform 0.3s ease, background 0.3s ease;
-                /* height: 50px; */
                 display: flex;
                 align-items: center;
                 color: #fff;
@@ -638,13 +638,6 @@
                 min-height: 360px;
 
             }
-
-
-
-
-
-
-
 
         }
 
@@ -747,15 +740,6 @@
             margin-left: 5px;
         }
 
-        .hamburger-icon {
-            background-image: url('./img/Hamburger_MD.svg');
-            background-size: 24px 24px;
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            margin-right: 5px;
-        }
-
         /* ________________________________________________________________________________________________________________________________________________ */
     </style>
 </head>
@@ -778,7 +762,6 @@
             <div class="burger-wrapper">
                 <div class="burger"
                     onclick="toggleMenu(), this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))">
-                    <!-- <span class="hamburger-icon"></span> -->
                     <button class="menu">
                         <svg width="50" height="50" viewBox="0 0 100 100">
                             <path class="line line1"
@@ -859,8 +842,6 @@
                         </ul>
                     </div>
 
-
-
                 </section>
                 <section class="side-categiries-banner">
                     <div class="side-banner-wrapper">
@@ -891,11 +872,6 @@
                 </section>
 
             </div>
-
-
-
-
-
 
             <div class="main-second-wrapper">
                 <section class="main">
@@ -1114,21 +1090,15 @@
                             about: "It all started in 2012 in a spare bedroom when we sold our first letterbox on eBay… or perhaps it was even earlier in 1955 when one of our first suppliers decided to manufacture letterboxes. We’ve come a long way since then. From a small dream to run a lifestyle business on the side, to becoming one of the leading suppliers of individual and communal post boxes in the UK. It’s a thrilling feeling to know that everyday thousands of people in the UK, Ireland, Germany and even Australia are checking their Letterbox4you supplied mail box.<br><br>We also have names like Kier Construction, Engie, Galliford Try, Willmott Dixon and some of the largest housing associations and councils in London on our client list. And there are going to be many more thousands this year!"
                         };
                         textElement.innerHTML = policies[policy];
-
-                        // Сбросить стиль всех кнопок
                         var buttons = document.querySelectorAll('.policies-buttons-card');
                         buttons.forEach(function (btn) {
-                            btn.classList.remove('policies-buttons-card-active'); // Убираем класс active
+                            btn.classList.remove('policies-buttons-card-active');
                         });
-
-                        // Установить активный стиль для выбранной кнопки
-                        button.classList.add('policies-buttons-card-active'); // Добавляем класс active
+                        button.classList.add('policies-buttons-card-active');
                     }
-
-                    // Устанавливаем текст по умолчанию при загрузке страницы
                     window.onload = function () {
                         var defaultButton = document.querySelector('.policies-buttons-card');
-                        showPolicy('payment', defaultButton);  // по умолчанию показывается текст "Payment"
+                        showPolicy('payment', defaultButton);
                     }
                 </script>
             </div>
